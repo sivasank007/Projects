@@ -1,0 +1,114 @@
+
+
+/*mobiles-list*/
+main{
+    padding: 30px 80px 0px 80px;
+    max-width: 80%;
+    margin: auto;
+}
+main header{
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+} 
+main header p span{ 
+    font-size: 3rem;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #111;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+    user-select: none;
+}
+main header p span:hover{
+    background: #222;
+    color: white;
+}
+#product-list{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+.product {
+    padding: 20px;
+}
+.product img{
+    width: 60%;
+    
+}
+#product-list::-webkit-scrollbar{
+    display: none;
+}
+#product-list .product{
+    min-width: 23%;
+    border-radius: 20px;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+.product a{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.product a img{
+    height: 10rem;
+}
+.product a p{
+    font-size: 1.2rem;
+    font-weight: 550;
+    padding-top: 1rem;
+}
+.product a img:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+.product:hover p{
+    color: blue;
+}
+
+/* mobile banners */
+
+#product-banners{
+    max-width: 80%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title h2{
+    text-align: center;
+    padding-bottom: 0.3rem;
+    margin: 3rem 0rem;
+    font-weight: 550;
+    font-size: 2.5rem;
+    border-bottom:0.3rem solid orangered;
+}
+#product-banners img{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 30px 80px 0px 80px;
+}
+#product-banners img:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}

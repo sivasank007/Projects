@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Prosto+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: 'Spartan',sans-serif;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+/* common styles */
+
+/* Header */
+
+#header{
+    display: flex;
+    justify-content: space-between;  
+    padding: 18px 80px;
+    background: rgb(219, 219, 219);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+#header .logo{
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    text-align: center;
+}
+#header .logo p{
+    margin-top: 13px;
+    color: rgb(236, 54, 4);
+    font-size: 23px;
+    margin-left: 10px;
+    font-weight: 550;
+}
+#header .logo img{
+    height: 50px;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+}
+#navbar li{
+    padding: 0 20px;
+    font-weight: bold;
+    position: relative;
+}
+#navbar .search{
+    display: flex;
+    width: 100%;
+}
+#navbar input{
+    height: 2.4rem;
+    padding-left: 10px;
+    font-size: 14px;
+    width: 300px;
+    border: 1px solid transparent;
+    outline: none;
+}
+#navbar button{
+    height: 2.4rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.2rem;
+    border: transparent;
+    font-weight: 550;
+    font-size: 14px;
+    cursor: pointer;
+    background: rgb(202, 202, 202);
+}
+#navbar button:hover{
+    background: rgb(169, 169, 169);
+}
+#navbar .lg-bag{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.portfolio{
+    display: none;
+}
+/* Footer */
+
+#footer-main{
+    background: rgb(219, 219, 219);
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 50px 80px 0px 80px;   
+}
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing: 0px;
+}
+.address .logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.address .logo img{
+    height: 40px;
+} 
+.address .logo p{
+    font-size: 1.4rem;
+    color: orangered;
+    font-weight: 550;
+    
+}
+.address span{
+    color: rgb(63, 61, 61);
+    font-size: 16px;
+}
+.social{
+    display: flex;
+    gap: 20px;
+    height: 50px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.acc{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.install{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.pay{
+    width: 250px;
+}
+.install-img img{
+    border: 1px solid;
+    border-radius: 5px;
+}
+.copy{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 550;
+    padding-bottom: 20px;
+}
+#mobile{
+    
+    align-items: center;
+    gap: 30px;
+    font-size: 27px;
+    display: none;
+}
+#close{
+    display: none;
+}
+
+/* media query */
+
+@media (max-width:750px){
+
+    /*navbar*/
+    #navbar .search{
+        display: none;
+    }
+
+    /*navbar*/
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        position: fixed; 
+        top: 0;
+        right: -300px;
+        height: 100vh; 
+        width: 300px;
+        background-color: rgb(219, 219, 219);
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 23px;
+        padding-top: 100px;
+    }
+    #navbar.active{
+        right: 0px;
+        transition: 0.5s;
+    }
+    #navbar li{
+        margin-bottom: 40px;
+    }
+    #navbar .header-shop{
+        margin-left: 20px;
+    }
+    .fa-xmark{
+        margin-left: 25px;
+        font-size: 40px;
+        position: absolute;
+        top: 30px;
+    }
+    #mobile{
+        display: flex;
+    }
+    .lg-bag{
+        display: none;
+    }
+    #close{
+        display: block;
+    }
+    .portfolio{
+        display: block;
+    }
+    .cart{
+        display: none;
+    }
+    /*footer*/
+
+    #footer {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .copy{
+        margin: 30px 0px 10px 0px;
+        padding: 0 80px;
+    }
+}
+
+@media (max-width:550px){
+    /*navbar*/
+
+    #header {
+        padding: 15px 20px;
+    }
+    #header .logo img{
+        height: 40px;
+    }
+    #header .logo p{
+        font-size: 1.3rem;
+    }
+    #bar{
+        font-size: 20px;
+    }
+    #bar:hover{
+        font-size: 20px;
+        color: orangered;
+        cursor: pointer;
+    }
+    .fa-cart-shopping{
+        font-size: 20px;
+    } 
+ 
+    /*footer*/
+    #footer{
+        display: flex;
+        padding: 20px 20px;
+        justify-content: space-between;
+    }
+    .copy{
+        padding: 0 30px;
+    }
+}
+
